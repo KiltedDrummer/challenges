@@ -1,0 +1,22 @@
+function TimeConvert(num) { 
+
+  // code goes here 
+  
+  let time = '';
+  let hours = 0;
+  let minutes = 0;
+  if (num >= 60) {
+      minutes = num % 60;
+      hours = (num-minutes)/60;
+  } else {
+      minutes = num;
+  }
+  time = hours + ':' + minutes;
+  num = time
+  
+  return num; 
+         
+}
+   
+// keep this function call here 
+TimeConvert(readline());
