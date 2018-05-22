@@ -1,0 +1,21 @@
+function AlphabetSoup(str) { 
+
+  // code goes here  
+  var anum=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    var strArray = str.split('');
+    var strValues = [];
+    var newArr = [];
+    for( i=0; i< strArray.length; i++) {
+        strValues.push(anum.indexOf(strArray[i]));
+    }
+    strValues.sort(function(a, b){return a - b})
+    for (i=0; i<strValues.length; i++) {
+        newArr.push(anum[strValues[i]]);
+    }
+    str = newArr.join('');
+  return str; 
+         
+}
+   
+// keep this function call here 
+AlphabetSoup(readline());
