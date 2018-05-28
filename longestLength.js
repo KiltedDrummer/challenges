@@ -28,3 +28,34 @@ function LongestWord (sen) {
 
 // keep this function call here
 LongestWord(readline());
+
+
+//***********************************************************
+
+// alternate solution using .forEach
+
+function LongestWord(sen) { 
+
+  // code goes here  
+  // break sen into an array of each word
+  // check length of each element in new array
+  // return element with longest length
+  
+  var words = sen.split(' ');
+  var length = 0;
+  var longest = '';
+  
+  words.forEach((element) => {
+      var word = element.replace(/[^a-zA-z]+/g, '');
+      if (word.length > length) {
+          length = word.length
+          longest = word;
+      }
+  })
+  
+  return longest; 
+         
+}
+   
+// keep this function call here 
+LongestWord(readline());
