@@ -10,7 +10,7 @@ function SimpleSymbols(str) {
     var result;
 
     arr.forEach((value, index) => {
-        if (letters.indexOf(value) > 0) {
+        if (letters.indexOf(value) >= 0) {
             if (arr[index - 1] === '+' && arr[index + 1] === '+') {
                 result = true;
             } else {
@@ -38,7 +38,7 @@ function SimpleSymbols(str) {
     var arr = str.split('');
 
     return arr.reduce((result, value, index) => {
-        if (letters.indexOf(value) > 0) {
+        if (letters.indexOf(value) >= 0) {
             if (arr[index - 1] === '+' && arr[index + 1] === '+') {
                 result = true;
             } else {
@@ -60,7 +60,7 @@ function SimpleSymbols(str) {
     var result;
 
     arr.map((value, index) => {
-        if (letters.indexOf(value) > 0) {
+        if (letters.indexOf(value) >= 0) {
             if (arr[index - 1] === '+' && arr[index + 1] === '+') {
                 result = true;
             } else {
